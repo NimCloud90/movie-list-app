@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-input-bars',
-  imports: [],
+  styleUrl: './input-bars.component.css',
   templateUrl: './input-bars.component.html',
-  styleUrl: './input-bars.component.css'
+  imports: [FormsModule, MatFormFieldModule, MatInputModule],
 })
-export class InputBarsComponent {
-
-}
+export class InputOverviewExample {}
