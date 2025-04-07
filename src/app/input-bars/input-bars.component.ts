@@ -9,4 +9,4 @@ import {FormsModule} from '@angular/forms';
   templateUrl: './input-bars.component.html',
   imports: [FormsModule, MatFormFieldModule, MatInputModule],
 })
-export class InputOverviewExample {}
+export class Input {}

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ButtonsComponent } from "./buttons/buttons.component";
-import { InputBarsComponent, InputOverviewExample } from "./input-bars/input-bars.component";
+import { Buttons } from "./buttons/buttons.component";
+import { Input } from "./input-bars/input-bars.component";
 
 @Component({
   selector: 'app-root',
-  imports: [ButtonsComponent, InputBarsComponent, InputOverviewExample],
+  imports: [Input, Buttons],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

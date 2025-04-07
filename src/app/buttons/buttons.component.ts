@@ -4,9 +4,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 
 @Component({
-  selector: 'button-overview-example',
+  selector: 'app-buttons',
   templateUrl: './buttons.component.html',
   styleUrl: './buttons.component.css',
   imports: [MatButtonModule, MatDividerModule, MatIconModule],
 })
-export class ButtonOverviewExample {}
+export class Buttons {}
