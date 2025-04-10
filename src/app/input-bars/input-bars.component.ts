@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import {FormBuilder, FormGroup, FormsModule, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-input-bars',
@@ -9,4 +9,21 @@ import {FormsModule} from '@angular/forms';
   templateUrl: './input-bars.component.html',
   imports: [FormsModule, MatFormFieldModule, MatInputModule],
 })
-export class Input {}
+export class Input {
+
+  myForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      myInput: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    if (this.myForm.valid) {
+      const inputValue = this.myForm.get('myInput')?.value;
+      // Use inputValue (the string from the textbox) as needed
+      console.log(inputValue);
+    }
+  }
+}
