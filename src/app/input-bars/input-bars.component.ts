@@ -22,7 +22,6 @@ export class Input {
   onSubmit() {
     if (this.myForm.valid) {
       const inputValue = this.myForm.get('myInput')?.value;
-      // Use inputValue (the string from the textbox) as needed
       console.log(inputValue);
     }
   }
