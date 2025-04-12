@@ -1,10 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Form } from './form.model.ts'
+import { Injectable, signal, WritableSignal } from '@angular/core';
+import { FormModel } from './form.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ActionService {
 
-
+Movies:WritableSignal<FormModel | null> = signal(null)
 }
+
+

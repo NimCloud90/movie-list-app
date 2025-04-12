@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormBuilder, FormGroup, FormsModule, Validators} from '@angular/forms';
+import { ActionService } from '../action.service';
 
 @Component({
   selector: 'app-input-bars',
@@ -11,17 +12,20 @@ import {FormBuilder, FormGroup, FormsModule, Validators} from '@angular/forms';
 })
 export class Input {
 
-  myForm: FormGroup;
+  Movies: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    this.myForm = this.fb.group({
+  constructor(private fb: FormBuilder, private actionService: ActionService) {
+    this.Movies = this.fb.group({
       myInput: ['', Validators.required]
     });
   }
+  movies() {
+    return this.actionService.Movies()
+  }
 
   onSubmit() {
-    if (this.myForm.valid) {
-      const inputValue = this.myForm.get('myInput')?.value;
+    if (this.Movies.valid) {
+      const inputValue = this.Movies.get('myInput')?.value;
       console.log(inputValue);
     }
   }
