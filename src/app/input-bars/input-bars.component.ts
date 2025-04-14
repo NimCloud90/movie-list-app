@@ -1,32 +1,26 @@
 import {Component} from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormBuilder, FormGroup, FormsModule, Validators} from '@angular/forms';
+import {FormBuilder, FormsModule, NgModel, Validators} from '@angular/forms';
 import { ActionService } from '../action.service';
-
+import { FormModel } from '../form.model';
 @Component({
   selector: 'app-input-bars',
   styleUrl: './input-bars.component.css',
   templateUrl: './input-bars.component.html',
-  imports: [FormsModule, MatFormFieldModule, MatInputModule],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule,],
 })
 export class Input {
 
-  Movies: FormGroup;
+  movieName:string = ''
+  movieDes:string = ''
 
   constructor(private fb: FormBuilder, private actionService: ActionService) {
-    this.Movies = this.fb.group({
-      myInput: ['', Validators.required]
-    });
-  }
-  movies() {
-    return this.actionService.Movies()
   }
 
   onSubmit() {
-    if (this.Movies.valid) {
-      const inputValue = this.Movies.get('myInput')?.value;
-      console.log(inputValue);
-    }
+    let movie:FormModel = {movieName: this.movieName, movieDes: this.movieDes}
+    this.actionService.movies.set([movie])
   }
+
 }
