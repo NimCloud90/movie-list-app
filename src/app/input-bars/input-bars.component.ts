@@ -20,7 +20,7 @@ export class Input {
 
   onSubmit() {
     let movie:FormModel = {movieName: this.movieName, movieDes: this.movieDes}
-    this.actionService.movies.set([movie])
+    this.actionService.movies.update((current)=> [...current,movie])
   }
 
 }

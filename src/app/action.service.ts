@@ -6,7 +6,7 @@ import { FormModel } from './form.model';
 })
 export class ActionService {
 
-movies:WritableSignal<FormModel[] | null> = signal(null)
+movies:WritableSignal<FormModel[]> = signal([])
 }
 
 

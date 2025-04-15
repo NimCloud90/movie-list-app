@@ -1,22 +1,19 @@
 <form class="movies-form">
   <mat-form-field class="full-width">
     <mat-label>Enter Movie Title</mat-label>
-    <input [(ngModel)]="movieName" matInput placeholder="Ex. Starwars" value="Movie:" >
+    <input name="movieName" [(ngModel)]="movieName" matInput placeholder="Ex. Starwars" value="Movie:" >
   </mat-form-field>
   <br>
   <mat-form-field class="full-width">
     <mat-label>Movie Description</mat-label>
-    <textarea [(ngModel)]="movieDes" matInput placeholder="Ex: Infodump about the plot here:" ></textarea>
+    <textarea name="movieDes" [(ngModel)]="movieDes" matInput placeholder="Ex: Infodump about the plot here:" ></textarea>
     <button mat-flat-button id="enter" (click)="onSubmit()">Enter</button>
   </mat-form-field>
-</form>
-
-<!-- <mat-divider></mat-divider>
-<section>
   <div class="crud-buttons-row" id="button-row">
     <button mat-flat-button id="edit">Edit</button>
     <button mat-flat-button id="delete">Delete</button>
   </div>
-</section>
-<mat-divider></mat-divider> -->
+</form>
+
+
 

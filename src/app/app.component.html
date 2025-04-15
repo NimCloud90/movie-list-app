@@ -1,2 +1,5 @@
 <app-input-bars></app-input-bars>
-<div>{{this.actionService.movies()}}</div>
+@for (movie of this.actionService.movies(); track $index) {
+  <div>{{movie.movieName}}</div>
+<div>{{movie.movieDes}}</div>
+}
