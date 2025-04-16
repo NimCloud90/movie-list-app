@@ -1,5 +1,11 @@
 <app-input-bars></app-input-bars>
-@for (movie of this.actionService.movies(); track $index) {
-  <div>{{movie.movieName}}</div>
-<div>{{movie.movieDes}}</div>
+@for (movie of movies(); track $index) {
+  <button>
+  [class.highlighted]="selectedMovie() === movie"
+  class="button-card"
+  mat-button
+  (click)="setSelected(movie)"
+  <div class="title">{{ movie.movieName }}</div>
+  <div class="des">{{ movie.movieDes }}</div>
+</button
 }

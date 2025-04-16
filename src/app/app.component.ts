@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { Input } from "./input-bars/input-bars.component";
 import { ActionService } from './action.service';
+import { FormModel } from './form.model';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,13 @@ import { ActionService } from './action.service';
 })
 export class AppComponent {
   title = 'my-angular-app';
-
-  constructor(public actionService:ActionService){}
-}
+  constructor(private actionService: ActionService) {}
+  movies() {
+    return this.actionService.movies();
+  }
+  setSelected(movie: FormModel) {
+    this.actionService.selctedMovie.set(movie);
+  }
+  selectedMovie() {
+    return this.actionService.selctedMovie();
+  }}

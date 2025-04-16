@@ -7,6 +7,7 @@ import { FormModel } from './form.model';
 export class ActionService {
 
 movies:WritableSignal<FormModel[]> = signal([])
+selctedMovie: WritableSignal<FormModel | null> = signal(null);
 }
 
 

@@ -1,0 +1,29 @@
+/* button {
+  background-color: rgb(114, 64, 161);
+  color: rgb(43, 17, 66);
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace; */
+/* } */
+
+.button-card {
+  background-color: rgb(114, 64, 161);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 16vh;
+  aspect-ratio: 2/1;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+.title {
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+.des {
+  font-size: 1rem;
+  color: whitesmoke;
+}
+.button-card.highlighted {
+  border: 2px solid whitesmoke;
+}
