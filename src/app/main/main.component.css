@@ -1,0 +1,46 @@
+.button-card {
+  background-color: rgb(114, 64, 161);
+  display: flex;
+  /* flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start; */
+  height: 16vh;
+  aspect-ratio: 2/1;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+.title {
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+.des {
+  font-size: 1rem;
+  color: whitesmoke;
+}
+.button-card.highlighted {
+  border: 2px solid whitesmoke;
+}
+
+.inputclass {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.main-container{
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+}

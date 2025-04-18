@@ -48,11 +48,4 @@ export class Input {
     this.deleteSelected();
   }
   
-  }
-  // deleteMovie(selectedMovie:FormModel){
-  //   const remainingMovies = this.actionService.movies().filter((singleMovie)=>{
-  // (singleMovie !== selectedMovie)
-  // })
-  //   this.actionService.movies.set(remainingMovies)
-  // }
-
+}

@@ -1,0 +1,11 @@
+<div class="main-container">
+  <app-input-bars class="inputclass"></app-input-bars>
+  <div class="cards">
+  @for (movie of movies(); track $index) {
+      <button [class.highlighted]="selectedMovie() === movie" class="button-card" mat-button (click)="setSelected(movie)">
+        <div class="title">{{ movie.movieName }}</div>
+        <div class="des">{{ movie.movieDes }}</div>
+      </button>
+    }
+  </div>
+</div>
