@@ -8,4 +8,5 @@ button {
 h2 {
   color: rgb(25, 14, 32);
   font-family: 'Courier New', Courier, monospace;
+  margin-right: 5px;
 }
